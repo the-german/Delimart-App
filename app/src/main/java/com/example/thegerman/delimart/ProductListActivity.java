@@ -1,5 +1,6 @@
 package com.example.thegerman.delimart;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +8,9 @@ import android.os.Bundle;
 
 import com.example.thegerman.delimart.Adapter.ProductAdapter;
 import com.example.thegerman.delimart.Model.Product;
+
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -75,6 +79,15 @@ public class ProductListActivity extends AppCompatActivity {
         productAdapter.add(Tomate);
 
 
-
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(ProductListActivity.this,SingleProductActivity.class);
+                startActivity(intent);
+            }
+        });
     }
+
+
 }
+
