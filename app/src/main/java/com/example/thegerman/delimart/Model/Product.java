@@ -7,9 +7,9 @@ public class Product {
     public  String description;
     public  String quantity;
     public String price;
-    public String image;
+    public int image;
 
-    public Product(String name, String description, String price, String quantity, String image) {
+    public Product(String name, String description, String price, String quantity, int image) {
         this.name = name;
         this.description = description;
         this.price = price;
@@ -33,7 +33,7 @@ public class Product {
         return price;
     }
 
-    public String getImage() {
+    public int getImage() {
         return image;
     }
 }

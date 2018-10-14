@@ -43,7 +43,7 @@ public class ProductAdapter extends ArrayAdapter<Product> {
         tvQuantity.setText(product.getQuantity());
         tvPrice.setText(product.getPrice());
 
-        Picasso.with(getContext()).load(product.getImage());
+        Picasso.with(getContext()).load(product.getImage()).into(ivImage);
 
         // Return the completed view to render on screen
         return  convertView;
