@@ -10,7 +10,7 @@ Time spent: 48 hours spent in total
 
 The following **required** functionality is completed:
 
-* [] User can **view The Start screen with some second delay.**
+* [X] User can **view The Start screen with some second delay.**
 * [] User can **view a list of products (title, poster image,price, and overview).** from the App
 
 * [X]  **Lists should be fully open when whe click on it.** 
