@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.example.thegerman.delimart.Model.Product;
 import com.example.thegerman.delimart.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,10 +38,12 @@ public class ProductAdapter extends ArrayAdapter<Product> {
         TextView tvPrice = convertView.findViewById(R.id.tvPrice);
 
         // Populate the data into the template view using the data object
-        ivImage.setImageBitmap(product.image);
-        tvName.setText(product.name);
-        tvQuantity.setText(product.quantity);
-        tvPrice.setText(product.price);
+        ivImage.setImageResource(0);
+        tvName.setText(product.getName());
+        tvQuantity.setText(product.getQuantity());
+        tvPrice.setText(product.getPrice());
+
+        Picasso.with(getContext()).load(product.getImage());
 
         // Return the completed view to render on screen
         return  convertView;
